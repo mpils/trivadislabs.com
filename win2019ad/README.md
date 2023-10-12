@@ -8,6 +8,12 @@ Read the prerequisites in the top level [README](../README.md#prerequisites) to 
 
 ```bash
 vagrant box add StefanScherer/windows_2019 --provider virtualbox
+
+# if your vagrant runs into an error like this:
+# "schannel: next InitializeSecurityContext failed: Unknown error (0x80092012) ..."
+# then add option "--insecure" to fix it!
+# see this: https://github.com/hashicorp/vagrant/issues/13102
+vagrant box add StefanScherer/windows_2019 --provider virtualbox --insecure
 ```
 
 ## Getting started
